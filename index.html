@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <meta name="theme-color" content="#f8f7f1" />
+    <title>BunionCare · Gentle Exercises for Mild Bunion Discomfort</title>
+    <meta name="description" content="BunionCare — gentle exercises for mild bunion discomfort. Improve big-toe mobility, foot strength and calf flexibility. 5 simple moves, 11 minutes." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+    <style>
+        /* ----- GLOBAL RESET & VARIABLES ----- */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --ink: #18352f;
+            --muted: #61736e;
+            --cream: #f8f7f1;
+            --paper: #fffefa;
+            --sage: #dce9dd;
+            --mint: #eaf3e8;
+            --green: #286c58;
+            --dark: #143c34;
+            --lime: #d7ed8a;
+            --line: #dfe6df;
+            --shadow-sm: 0 8px 25px rgba(26, 63, 51, 0.06);
+            --shadow-md: 0 22px 60px rgba(26, 63, 51, 0.11);
+            --shadow-lg: 0 30px 100px rgba(0, 0, 0, 0.20);
+            --radius-card: 28px;
+            --radius-pill: 999px;
+            --transition: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            margin: 0;
+            background: var(--cream);
+            color: var(--ink);
+            font-family: var(--font-sans);
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        button {
+            font: inherit;
+            cursor: pointer;
+            border: 0;
+            background: none;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        .no-scroll {
+            overflow: hidden !important;
+        }
+
+        /* ----- SKIP LINK (a11y) ----- */
+        .skip-link {
+            position: fixed;
+            top: -999px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--dark);
+            color: white;
+            padding: 12px 24px;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+            z-index: 999;
+            transition: top 0.2s;
+        }
+        .skip-link:focus {
+            top: 16px;
+        }
+
+        /* ----- HEADER / NAVIGATION ----- */
+        .site-header {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            background: rgba(248, 247, 241, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(223, 230, 223, 0.6);
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        .site-header.scrolled {
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font: 800 22px/1 var(--font-display);
+        }
+        .brand>span:last-child>span {
+            color: var(--green);
+        }
+        .brand-mark {
+            display: grid;
+            place-items: center;
+            width: 40px;
+            height: 40px;
+            background: var(--dark);
+            border-radius: 13px;
+            font-size: 21px;
+            transition: transform 0.2s;
+        }
+        .brand:hover .brand-mark {
+            transform: scale(1.04) rotate(-2deg);
+        }
+        .nav {
+            display: flex;
+            gap: 32px;
+            color: #526660;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .nav a {
+            position: relative;
+            transition: color 0.2s;
+        }
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--green);
+            transition: width 0.3s ease;
+        }
+        .nav a:hover {
+            color: var(--green);
+        }
+        .nav a:hover::after {
+            width: 100%;
+        }
+        .nav-cta {
+            background: var(--dark);
+            color: white;
+            border-radius: var(--radius-pill);
+            padding: 11px 20px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: transform 0.25s, box-shadow 0.25s;
+            box-shadow: 0 4px 12px rgba(20, 60, 52, 0.15);
+        }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(20, 60, 52, 0.20);
+        }
+        .nav-cta span {
+            margin-left: 7px;
+            color: var(--lime);
+        }
+        .nav-toggle {
+            display: none;
+            width: 48px;
+            height: 48px;
+            border: 0;
+            background: transparent;
+            border-radius: 14px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            transition: background 0.2s;
+        }
+        .nav-toggle:hover {
+            background: rgba(0, 0, 0, 0.03);
+        }
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2.5px;
+            background: var(--dark);
+            border-radius: 4px;
+            transition: 0.3s ease;
+        }
+        .nav-toggle.active span:nth-child(1) {
+            transform: translateY(7.5px) rotate(45deg);
+        }
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        .nav-toggle.active span:nth-child(3) {
+            transform: translateY(-7.5px) rotate(-45deg);
+        }
+        .mobile-nav {
+            display: none;
+        }
+
+        /* ----- HERO ----- */
+        .hero {
+            max-width: 1260px;
+            margin: 0 auto;
+            min-height: 650px;
+            padding: 90px 6% 80px;
+            display: grid;
+            grid-template-columns: 1.02fr 0.98fr;
+            align-items: center;
+            gap: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-copy {
+            position: relative;
+            z-index: 2;
+        }
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: 1.8px;
+            font-weight: 800;
+            color: var(--green);
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .pulse-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #8abf65;
+            border-radius: 50%;
+            box-shadow: 0 0 0 6px rgba(138, 191, 101, 0.2);
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+        @keyframes pulse-dot {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(138, 191, 101, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(138, 191, 101, 0);
+            }
+        }
+        .hero h1 {
+            font: 800 clamp(38px, 5.4vw, 68px)/1.04 var(--font-display);
+            margin: 18px 0 12px;
+            color: var(--dark);
+            letter-spacing: -2.8px;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--green);
+        }
+        .hero-text {
+            font-size: 18px;
+            max-width: 620px;
+            color: var(--muted);
+            margin: 0 0 20px;
+            line-height: 1.6;
+        }
+        .hero-text strong {
+            color: var(--dark);
+        }
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            border: 0;
+            border-radius: var(--radius-pill);
+            padding: 14px 24px;
+            font-weight: 800;
+            font-size: 15px;
+            cursor: pointer;
+            transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+            display: inline-flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            min-height: 56px;
+            touch-action: manipulation;
+        }
+        .btn:active {
+            transform: scale(0.96);
+        }
+        .btn-primary {
+            background: var(--dark);
+            color: white;
+            box-shadow: 0 12px 25px rgba(20, 60, 52, 0.18);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 36px rgba(20, 60, 52, 0.22);
+        }
+        .btn-primary span {
+            color: var(--lime);
+            transition: transform 0.25s;
+        }
+        .btn-primary:hover span {
+            transform: translateX(4px);
+        }
+        .btn-soft {
+            background: white;
+            color: var(--dark);
+            border: 1px solid var(--line);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+        .btn-soft:hover {
+            background: var(--paper);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+        }
+        .trust-row {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #53665f;
+        }
+        .trust-row span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .trust-row span::before {
+            content: '✓';
+            color: var(--green);
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        /* Medical disclaimer - prominent */
+        .medical-disclaimer {
+            font-size: 12px;
+            color: var(--muted);
+            background: rgba(255, 255, 255, 0.7);
+            padding: 8px 18px;
+            border-radius: var(--radius-pill);
+            margin-top: 16px;
+            display: inline-block;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(223, 230, 223, 0.4);
+        }
+        .medical-disclaimer span {
+            margin-right: 6px;
+        }
+
+        .hero-note {
+            display: block;
+            margin-top: 10px;
+            color: #89938e;
+            font-size: 12px;
+        }
+
+        /* ----- HERO ART ----- */
+        .hero-art {
+            min-height: 470px;
+            position: relative;
+            display: grid;
+            place-items: center;
+        }
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .blob-a {
+            width: 390px;
+            height: 390px;
+            background: #dcebd9;
+            right: 8%;
+            top: 7%;
+            animation: floatA 12s ease-in-out infinite alternate;
+        }
+        .blob-b {
+            width: 180px;
+            height: 180px;
+            background: #e9e9b6;
+            left: 4%;
+            bottom: 5%;
+            animation: floatB 16s ease-in-out infinite alternate;
+        }
+        @keyframes floatA {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                transform: translate(-20px, 16px) scale(1.04);
+            }
+        }
+        @keyframes floatB {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                transform: translate(18px, -14px) scale(1.06);
+            }
+        }
+        .foot-card {
+            position: relative;
+            width: 310px;
+            padding: 29px 28px 32px;
+            border-radius: var(--radius-card);
+            background: rgba(255, 254, 250, 0.94);
+            backdrop-filter: blur(4px);
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            transform: rotate(2deg);
+            transition: transform 0.5s ease;
+            animation: cardFloat 6s ease-in-out infinite alternate;
+            z-index: 2;
+        }
+        @keyframes cardFloat {
+            0% {
+                transform: rotate(1deg) translateY(0);
+            }
+            100% {
+                transform: rotate(3deg) translateY(-8px);
+            }
+        }
+        .mini-label {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+            color: #82918b;
+            text-transform: uppercase;
+        }
+        .foot-icon {
+            font-size: 100px;
+            line-height: 1;
+            text-align: center;
+            margin: 8px 0 4px;
+        }
+        .foot-card strong {
+            display: block;
+            text-align: center;
+            font: 800 21px/1.3 var(--font-display);
+            color: var(--dark);
+        }
+        .foot-card>span {
+            display: block;
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 2px;
+        }
+        .progress {
+            height: 6px;
+            background: #e9eee9;
+            border-radius: 9px;
+            margin-top: 22px;
+            overflow: hidden;
+        }
+        .progress i {
+            display: block;
+            width: 70%;
+            height: 100%;
+            background: var(--green);
+            border-radius: 9px;
+            transition: width 0.8s ease;
+        }
+        .progress-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            font-size: 11px;
+            color: #87938e;
+        }
+        .progress-meta b {
+            color: var(--green);
+        }
+        .floating-chip {
+            position: absolute;
+            background: white;
+            padding: 12px 18px;
+            border-radius: var(--radius-pill);
+            box-shadow: 0 12px 30px rgba(30, 60, 50, 0.13);
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--dark);
+            z-index: 3;
+            backdrop-filter: blur(4px);
+            animation: chipFloat 4s ease-in-out infinite alternate;
+        }
+        .chip-one {
+            top: 14%;
+            right: 0;
+            animation-delay: 0.2s;
+        }
+        .chip-two {
+            bottom: 15%;
+            left: 1%;
+            animation-delay: 0.8s;
+        }
+        @keyframes chipFloat {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-6px);
+            }
+        }
+
+        /* ----- INTRO STRIP ----- */
+        .intro-strip {
+            background: var(--dark);
+            color: white;
+            padding: 24px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .intro-strip div {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .intro-strip strong {
+            font: 800 15px var(--font-display);
+            color: var(--lime);
+        }
+        .intro-strip span {
+            color: #d4e0db;
+            font-size: 14px;
+        }
+        .intro-strip a {
+            font-weight: 800;
+            font-size: 13px;
+            color: var(--lime);
+            transition: opacity 0.2s;
+            white-space: nowrap;
+        }
+        .intro-strip a:hover {
+            opacity: 0.8;
+        }
+
+        /* ----- EXERCISE SECTION ----- */
+        .section {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 80px 6% 100px;
+        }
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: flex-end;
+            margin-bottom: 44px;
+        }
+        .section h2 {
+            font: 800 clamp(32px, 4vw, 46px)/1.08 var(--font-display);
+            margin: 12px 0 0;
+            color: var(--dark);
+            letter-spacing: -1.6px;
+        }
+        .section-heading p {
+            max-width: 300px;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .exercise-card {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-card);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+        }
+        .exercise-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+        .exercise-card:active {
+            transform: scale(0.98);
+        }
+        .exercise-card.wide {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+        }
+        .card-image {
+            height: 260px;
+            background: #e6eee4;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .wide .card-image {
+            height: 100%;
+            min-height: 280px;
+        }
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 12px;
+            transition: transform 0.5s ease;
+        }
+        .exercise-card:hover .card-image img {
+            transform: scale(1.02);
+        }
+        .card-image.image-missing {
+            background: linear-gradient(135deg, #e5eee3, #f5f4e9);
+            display: grid;
+            place-items: center;
+            color: #7c8c85;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px;
+        }
+        .number {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(20, 60, 52, 0.88);
+            color: white;
+            border-radius: var(--radius-pill);
+            padding: 6px 14px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.4px;
+            backdrop-filter: blur(4px);
+        }
+        .view {
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            background: white;
+            color: var(--dark);
+            border-radius: var(--radius-pill);
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 800;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
+        .exercise-card:hover .view,
+        .exercise-card:focus .view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .card-body {
+            padding: 22px 24px 26px;
+        }
+        .tag {
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            font-weight: 900;
+            color: var(--green);
+            text-transform: uppercase;
+        }
+        .card-body h3 {
+            font: 800 22px/1.2 var(--font-display);
+            margin: 8px 0 4px;
+            color: var(--dark);
+        }
+        .card-body p {
+            font-size: 14px;
+            color: var(--muted);
+            margin: 0 0 16px;
+            line-height: 1.5;
+        }
+        .dose {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-top: 1px solid var(--line);
+            padding-top: 14px;
+            font-size: 13px;
+            flex-wrap: wrap;
+        }
+        .dose b {
+            font-size: 15px;
+            color: var(--dark);
+        }
+        .dose span {
+            color: var(--muted);
+        }
+        .dose small {
+            margin-left: auto;
+            color: var(--green);
+            font-weight: 800;
+            font-size: 12px;
+        }
+
+        /* Foot indicator badges */
+        .foot-indicator {
+            display: inline-flex;
+            gap: 6px;
+            align-items: center;
+            margin: 6px 0 10px;
+            flex-wrap: wrap;
+        }
+        .foot-badge {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 12px;
+            border-radius: var(--radius-pill);
+            background: var(--mint);
+            color: var(--green);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .foot-badge.both {
+            background: var(--sage);
+        }
+        .foot-badge.left {
+            background: #e3edf0;
+            color: #1a5a6b;
+        }
+        .foot-badge.right {
+            background: #f0e8e3;
+            color: #6b4a1a;
+        }
+
+        /* ----- ROUTINE SECTION ----- */
+        .routine-section {
+            background: var(--sage);
+            padding: 80px max(6%, calc((100% - 1140px) / 2));
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 70px;
+            align-items: center;
+        }
+        .routine-copy h2 {
+            font: 800 clamp(32px, 4vw, 46px)/1.08 var(--font-display);
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+        .routine-copy p {
+            color: #597067;
+            max-width: 450px;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+        .routine-list {
+            background: rgba(255, 254, 250, 0.82);
+            backdrop-filter: blur(4px);
+            border-radius: var(--radius-card);
+            padding: 8px 22px;
+            box-shadow: 0 15px 40px rgba(38, 77, 61, 0.07);
+        }
+        .routine-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 4px;
+            border-bottom: 1px solid rgba(111, 139, 126, 0.2);
+        }
+        .routine-item:last-child {
+            border: 0;
+        }
+        .routine-item>span {
+            font: 800 12px var(--font-display);
+            color: #8a9d95;
+            width: 28px;
+            flex-shrink: 0;
+        }
+        .routine-item div {
+            flex: 1;
+            min-width: 0;
+        }
+        .routine-item b {
+            display: block;
+            font-size: 15px;
+            color: var(--dark);
+        }
+        .routine-item small {
+            color: #778881;
+            font-size: 12px;
+        }
+        .routine-item>strong {
+            font-size: 12px;
+            color: var(--green);
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        /* ----- SAFETY SECTION ----- */
+        .safety {
+            max-width: 1140px;
+            margin: 20px auto 80px;
+            padding: 32px 40px;
+            display: grid;
+            grid-template-columns: auto 1.2fr 1fr;
+            gap: 28px;
+            align-items: start;
+            background: #fff7dd;
+            border: 1px solid #efe3bd;
+            border-radius: var(--radius-card);
+        }
+        .safety-icon {
+            width: 56px;
+            height: 56px;
+            display: grid;
+            place-items: center;
+            border-radius: 18px;
+            background: #fff;
+            color: #b07d28;
+            font-size: 26px;
+            flex-shrink: 0;
+        }
+        .safety h2 {
+            font: 800 clamp(24px, 2.6vw, 30px)/1.1 var(--font-display);
+            margin: 8px 0 4px;
+            color: var(--dark);
+            letter-spacing: -0.8px;
+        }
+        .safety p,
+        .safety li {
+            font-size: 13px;
+            color: #756d58;
+            line-height: 1.6;
+        }
+        .safety ul {
+            margin: 6px 0 0;
+            padding-left: 20px;
+        }
+        .safety li {
+            margin: 8px 0;
+        }
+
+        /* ----- FAQ ----- */
+        .faq {
+            padding-top: 20px;
+            padding-bottom: 80px;
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .faq details {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 18px 22px;
+            transition: box-shadow 0.25s;
+        }
+        .faq details:hover {
+            box-shadow: var(--shadow-sm);
+        }
+        .faq summary {
+            list-style: none;
+            cursor: pointer;
+            font-weight: 800;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            user-select: none;
+        }
+        .faq summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq summary span {
+            font-size: 22px;
+            color: var(--green);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        .faq details[open] summary span {
+            transform: rotate(45deg);
+        }
+        .faq details p {
+            font-size: 13px;
+            color: var(--muted);
+            margin: 16px 0 4px;
+            line-height: 1.6;
+        }
+
+        /* ----- FOOTER ----- */
+        footer {
+            padding: 44px 6%;
+            background: var(--dark);
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
+            gap: 20px;
+        }
+        .footer-brand {
+            font: 800 20px var(--font-display);
+        }
+        .footer-brand span {
+            margin-right: 6px;
+        }
+        .footer-brand+p {
+            margin: 0;
+            text-align: center;
+            color: #bdd0c9;
+            font-size: 13px;
+        }
+        .copyright {
+            text-align: right;
+            color: #8fa9a0;
+            font-size: 11px;
+            line-height: 1.7;
+        }
+        .copyright strong {
+            color: #cfe3db;
+            font-weight: 700;
+        }
+
+        /* ----- MODAL (exercise detail) ----- */
+        .modal,
+        .timer-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 200;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .modal.open,
+        .timer-modal.open {
+            display: flex;
+            opacity: 1;
+        }
+        .modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(9, 31, 27, 0.66);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+        .modal-panel {
+            position: relative;
+            z-index: 2;
+            background: var(--paper);
+            width: min(1050px, 100%);
+            max-height: 92vh;
+            overflow: auto;
+            border-radius: var(--radius-card);
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            box-shadow: var(--shadow-lg);
+            animation: modalIn 0.35s ease;
+        }
+        @keyframes modalIn {
+            from {
+                transform: scale(0.94) translateY(16px);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+        .modal-img {
+            background: #e7eee5;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 16px;
+        }
+        .modal-content {
+            padding: 44px 40px 40px;
+            overflow-y: auto;
+        }
+        .modal-content h2 {
+            font: 800 32px/1.1 var(--font-display);
+            color: var(--dark);
+            margin: 8px 0 6px;
+        }
+        .modal-content>p {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .modal-dose {
+            background: var(--mint);
+            padding: 16px 20px;
+            border-radius: 16px;
+            color: var(--green);
+            font-weight: 800;
+            font-size: 15px;
+            margin: 20px 0 24px;
+        }
+        .modal-content h4 {
+            font: 800 15px var(--font-display);
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+        .modal-content li {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+        .modal-close {
+            position: absolute;
+            right: 18px;
+            top: 18px;
+            z-index: 4;
+            border: 0;
+            background: white;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            font-size: 26px;
+            line-height: 1;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: grid;
+            place-items: center;
+        }
+        .modal-close:hover {
+            transform: scale(1.06);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+        }
+
+        /* ----- TIMER MODAL (Enhanced with interval guidance) ----- */
+        .timer-modal .modal-backdrop {
+            background: rgba(9, 31, 27, 0.7);
+        }
+        .timer-card {
+            position: relative;
+            width: min(540px, 100%);
+            background: var(--paper);
+            border-radius: var(--radius-card);
+            padding: 44px 40px 40px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            animation: modalIn 0.35s ease;
+        }
+        .timer-card h2 {
+            font: 800 28px/1.1 var(--font-display);
+            margin: 6px 0 4px;
+            color: var(--dark);
+        }
+        .timer-ring {
+            --pct: 0deg;
+            width: 180px;
+            height: 180px;
+            margin: 16px auto 6px;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+            background: conic-gradient(var(--green) var(--pct), #dce9dd 0);
+            transition: background 0.2s linear;
+            position: relative;
+        }
+        .timer-ring::before {
+            content: '';
+            position: absolute;
+            inset: 10px;
+            background: var(--paper);
+            border-radius: 50%;
+        }
+        .timer-ring span,
+        .timer-ring small {
+            position: relative;
+            z-index: 1;
+        }
+        .timer-ring span {
+            font: 800 52px/1 var(--font-display);
+            color: var(--dark);
+        }
+        .timer-ring small {
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .timer-step-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--muted);
+            margin: 8px 0 4px;
+        }
+        .timer-instruction {
+            font-size: 14px;
+            color: var(--muted);
+            margin: 4px 0 6px;
+            line-height: 1.5;
+            min-height: 44px;
+        }
+        .timer-instruction strong {
+            color: var(--dark);
+        }
+        .timer-foot-indicator {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 8px 0 16px;
+        }
+        .timer-foot-indicator .foot-badge {
+            font-size: 12px;
+            padding: 4px 14px;
+        }
+        .timer-controls {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .timer-controls .btn {
+            min-width: 120px;
+            flex: 1;
+        }
+        .routine-progress {
+            height: 6px;
+            background: #e5ebe5;
+            border-radius: 10px;
+            margin-top: 24px;
+            overflow: hidden;
+        }
+        .routine-progress i {
+            display: block;
+            width: 0;
+            height: 100%;
+            background: var(--green);
+            border-radius: 10px;
+            transition: width 0.4s ease;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 900px) {
+            .nav {
+                display: none;
+            }
+            .nav-cta {
+                display: none;
+            }
+            .nav-toggle {
+                display: flex;
+            }
+            .mobile-nav {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 78px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--cream);
+                z-index: 99;
+                padding: 20px 6% 30px;
+                gap: 4px;
+                transform: translateY(-12px);
+                opacity: 0;
+                pointer-events: none;
+                transition: 0.3s ease;
+                overflow-y: auto;
+            }
+            .mobile-nav.open {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .mobile-nav a {
+                padding: 18px 6px;
+                font-size: 18px;
+                font-weight: 700;
+                color: var(--dark);
+                border-bottom: 1px solid var(--line);
+            }
+            .mobile-nav .btn {
+                margin-top: 20px;
+                justify-content: center;
+                width: 100%;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+                padding-top: 50px;
+                padding-bottom: 60px;
+                min-height: auto;
+            }
+            .hero-art {
+                min-height: 340px;
+            }
+            .exercise-grid {
+                grid-template-columns: 1fr;
+            }
+            .exercise-card.wide {
+                grid-column: auto;
+                display: block;
+            }
+            .wide .card-image {
+                height: 260px;
+                min-height: auto;
+            }
+            .section-heading {
+                display: block;
+            }
+            .section-heading p {
+                max-width: 100%;
+                margin-top: 6px;
+            }
+            .routine-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 60px 6%;
+            }
+            .safety {
+                margin: 20px 6% 60px;
+                grid-template-columns: auto 1fr;
+                padding: 28px 24px;
+            }
+            .safety ul {
+                grid-column: span 2;
+            }
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            footer {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                text-align: center;
+            }
+            .footer-brand+p,
+            .copyright {
+                text-align: center;
+            }
+            .modal-panel {
+                grid-template-columns: 1fr;
+                max-height: 94dvh;
+            }
+            .modal-img {
+                min-height: 200px;
+                height: 32vh;
+            }
+            .modal-content {
+                padding: 28px 22px 32px;
+            }
+            .modal-content h2 {
+                font-size: 28px;
+            }
+            .timer-card {
+                padding: 32px 20px 30px;
+            }
+            .timer-ring {
+                width: 150px;
+                height: 150px;
+            }
+            .timer-ring span {
+                font-size: 44px;
+            }
+            .timer-controls .btn {
+                min-width: 100px;
+            }
+            .floating-chip {
+                padding: 8px 14px;
+                font-size: 12px;
+            }
+            .chip-one {
+                top: 8%;
+                right: -4px;
+            }
+            .chip-two {
+                bottom: 10%;
+                left: -4px;
+            }
+            .foot-card {
+                width: 260px;
+                padding: 22px 20px 26px;
+            }
+            .foot-icon {
+                font-size: 80px;
+            }
+            .medical-disclaimer {
+                font-size: 11px;
+                padding: 6px 14px;
+            }
+        }
+        @media (max-width: 480px) {
+            .site-header {
+                padding: 0 4%;
+                height: 68px;
+            }
+            .brand {
+                font-size: 18px;
+            }
+            .brand-mark {
+                width: 34px;
+                height: 34px;
+                font-size: 18px;
+            }
+            .hero {
+                padding: 40px 5% 50px;
+            }
+            .hero h1 {
+                font-size: 34px;
+                letter-spacing: -1.4px;
+            }
+            .hero-text {
+                font-size: 16px;
+            }
+            .hero-actions {
+                flex-direction: column;
+            }
+            .hero-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .trust-row {
+                gap: 12px;
+                font-size: 12px;
+            }
+            .section {
+                padding: 50px 5% 60px;
+            }
+            .section h2 {
+                font-size: 28px;
+            }
+            .card-body h3 {
+                font-size: 20px;
+            }
+            .card-image {
+                height: 200px;
+            }
+            .wide .card-image {
+                height: 200px;
+            }
+            .routine-item {
+                padding: 14px 2px;
+                gap: 10px;
+            }
+            .routine-item b {
+                font-size: 14px;
+            }
+            .safety {
+                padding: 20px 18px;
+                margin: 16px 4% 40px;
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .safety ul {
+                grid-column: auto;
+            }
+            .modal-close {
+                width: 38px;
+                height: 38px;
+                font-size: 22px;
+                right: 12px;
+                top: 12px;
+            }
+            .timer-controls {
+                flex-direction: column;
+            }
+            .timer-controls .btn {
+                width: 100%;
+            }
+            .mobile-nav {
+                top: 68px;
+                padding: 16px 5% 20px;
+            }
+            .mobile-nav a {
+                font-size: 16px;
+                padding: 14px 4px;
+            }
+            .intro-strip {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+                padding: 18px 5%;
+            }
+            .intro-strip div {
+                justify-content: center;
+            }
+            .intro-strip a {
+                text-align: center;
+            }
+            footer {
+                padding: 32px 5%;
+                font-size: 14px;
+            }
+            .timer-foot-indicator {
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+            .timer-instruction {
+                font-size: 13px;
+            }
+        }
+
+        /* ----- UTILITY / ACCESSIBILITY ----- */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+        a:focus-visible,
+        button:focus-visible,
+        .exercise-card:focus-visible {
+            outline: 3px solid var(--green);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <a class="skip-link" href="#program">Skip to exercises</a>
+
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+        <a class="brand" href="#top" aria-label="BunionCare home">
+            <span class="brand-mark" aria-hidden="true">🦶</span>
+            <span>Bunion<span>Care</span></span>
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="#program">Exercises</a>
+            <a href="#routine">Routine</a>
+            <a href="#safety">Safety</a>
+        </nav>
+        <a class="nav-cta" href="#routine">Start Routine <span aria-hidden="true">→</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- MOBILE NAV -->
+    <nav class="mobile-nav" id="mobileNav" aria-hidden="true" aria-label="Mobile navigation">
+        <a href="#program">Exercises</a>
+        <a href="#routine">Routine</a>
+        <a href="#safety">Safety</a>
+        <a class="btn btn-primary" href="#routine">Start Routine <span aria-hidden="true">→</span></a>
+    </nav>
+
+    <main id="top">
+        <!-- HERO -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <div class="eyebrow">
+                    <span class="pulse-dot" aria-hidden="true"></span>
+                    Gentle daily foot-care program
+                </div>
+                <h1 id="hero-title">Gentle exercises for<br /><em>mild bunion discomfort</em></h1>
+                <p class="hero-text">Improve <strong>big-toe mobility</strong>, <strong>foot strength</strong> and <strong>calf flexibility</strong> — at your own pace.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#program">Explore exercises <span aria-hidden="true">↓</span></a>
+                    <a class="btn btn-soft" href="#safety">Read safety guide</a>
+                </div>
+                <div class="medical-disclaimer">
+                    <span>⚕️</span> Educational guide only • Not a diagnosis or substitute for professional medical advice
+                </div>
+                <div class="trust-row">
+                    <span>Beginner friendly</span>
+                    <span>Minimal equipment</span>
+                    <span>10–15 min routine</span>
+                </div>
+                <small class="hero-note">*Towel and small objects are optional for exercises 3–4.</small>
+            </div>
+
+            <div class="hero-art" aria-hidden="true">
+                <div class="blob blob-a"></div>
+                <div class="blob blob-b"></div>
+                <div class="foot-card">
+                    <div class="mini-label">Today's focus</div>
+                    <div class="foot-icon">🦶</div>
+                    <strong>Mobility + Strength</strong>
+                    <span>Small steps. Consistent practice.</span>
+                    <div class="progress"><i style="width:70%"></i></div>
+                    <div class="progress-meta"><span>5 exercises</span><b>Ready</b></div>
+                </div>
+                <div class="floating-chip chip-one">10–15 min</div>
+                <div class="floating-chip chip-two">Gentle • Controlled</div>
+            </div>
+        </section>
+
+        <!-- INTRO STRIP -->
+        <aside class="intro-strip" aria-label="Program overview">
+            <div>
+                <strong>What this program is for</strong>
+                <span>Designed as a gentle exercise guide for mild bunion symptoms.</span>
+            </div>
+            <a href="#safety">Know the limits →</a>
+        </aside>
+
+        <!-- EXERCISES -->
+        <section class="section" id="program" aria-labelledby="program-title">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">The 5-move program</div>
+                    <h2 id="program-title">Move better. Build strength. Stay consistent.</h2>
+                </div>
+                <p>Tap any exercise card to open detailed instructions.</p>
+            </div>
+
+            <div class="exercise-grid" role="list">
+                <!-- Exercise cards injected by JS -->
+            </div>
+        </section>
+
+        <!-- ROUTINE -->
+        <section class="routine-section" id="routine" aria-labelledby="routine-title">
+            <div class="routine-copy">
+                <div class="eyebrow">A simple daily flow</div>
+                <h2 id="routine-title">Your 10–15 minute<br />foot routine.</h2>
+                <p>Move slowly, breathe normally and keep every movement comfortable. Consistency matters more than intensity.</p>
+                <button class="btn btn-primary" id="startRoutine">Start guided routine <span aria-hidden="true">▶</span></button>
+            </div>
+            <div class="routine-list" role="list">
+                <!-- Routine items injected by JS -->
+            </div>
+        </section>
+
+        <!-- SAFETY -->
+        <section class="safety" id="safety" aria-labelledby="safety-title">
+            <div class="safety-icon" aria-hidden="true">♥</div>
+            <div>
+                <div class="eyebrow">Important</div>
+                <h2 id="safety-title">Comfort first. No forcing.</h2>
+                <p>These exercises may improve foot strength, mobility and comfort, but they cannot guarantee that an established bunion will be straightened or permanently corrected.</p>
+            </div>
+            <ul>
+                <li>Stop if an exercise causes or increases pain.</li>
+                <li>Do not force the big toe into position.</li>
+                <li>If symptoms are severe, worsening, or affecting walking, seek professional advice.</li>
+            </ul>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section faq" aria-labelledby="faq-title">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">Good to know</div>
+                    <h2 id="faq-title">Common questions</h2>
+                </div>
+            </div>
+            <div class="faq-grid">
+                <details>
+                    <summary>Can exercises permanently remove a bunion? <span aria-hidden="true">+</span></summary>
+                    <p>Exercises generally do not reverse an established bony deformity. They are better viewed as a way to work on mobility, strength and symptom management.</p>
+                </details>
+                <details>
+                    <summary>Should I use a toe separator? <span aria-hidden="true">+</span></summary>
+                    <p>A comfortable separator may reduce rubbing or pressure for some people. It should not be tight or painful, and it is not a guaranteed correction device.</p>
+                </details>
+                <details>
+                    <summary>When should I get professional help? <span aria-hidden="true">+</span></summary>
+                    <p>Consider an assessment if pain is significant or persistent, the deformity is progressing, walking becomes difficult, or footwear is increasingly uncomfortable.</p>
+                </details>
+                <details>
+                    <summary>How often should I exercise? <span aria-hidden="true">+</span></summary>
+                    <p>Follow the dose shown for each exercise and prioritize comfortable, controlled movement over doing more repetitions.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="footer-brand"><span aria-hidden="true">🦶</span> BunionCare</div>
+        <p>Gentle guidance for better foot mobility.</p>
+        <span class="copyright">© 2026 BunionCare • Educational content, not a diagnosis.<br />Designed by <strong>Nishant Gaurav</strong></span>
+    </footer>
+
+    <!-- MODAL (exercise detail) -->
+    <div class="modal" id="exerciseModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-panel">
+            <button class="modal-close" data-close aria-label="Close exercise details">×</button>
+            <div class="modal-img"><img id="modalImage" src="" alt="" /></div>
+            <div class="modal-content">
+                <div class="tag" id="modalTag"></div>
+                <h2 id="modalTitle"></h2>
+                <div class="foot-indicator" id="modalFootIndicator"></div>
+                <p id="modalDescription"></p>
+                <div class="modal-dose" id="modalDose"></div>
+                <h4>Remember</h4>
+                <ul id="modalTips"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- TIMER MODAL (Enhanced) -->
+    <div class="timer-modal" id="timerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="timerTitle">
+        <div class="modal-backdrop" data-close-timer></div>
+        <div class="timer-card">
+            <button class="modal-close" id="timerClose" aria-label="Close timer">×</button>
+            <div class="eyebrow">Guided routine</div>
+            <h2 id="timerTitle">Big-Toe Stretch</h2>
+            <div class="timer-ring" id="timerRing" style="--pct:0deg">
+                <span id="timerValue" aria-live="polite">60</span>
+                <small>sec</small>
+            </div>
+            <div class="timer-step-label">Step <span id="timerStepNum">1</span> of <span id="timerStepTotal">5</span></div>
+            <div class="timer-instruction" id="timerInstruction">Move gently and stay within a comfortable range.</div>
+            <div class="timer-foot-indicator" id="timerFootIndicator">
+                <span class="foot-badge both">👣 Both feet</span>
+            </div>
+            <div class="timer-controls">
+                <button class="btn btn-primary" id="timerStart">Start</button>
+                <button class="btn btn-soft" id="timerSkip">Skip →</button>
+            </div>
+            <div class="routine-progress"><i id="routineProgress"></i></div>
+        </div>
+    </div>
+
+    <script>
+        /* ============================================================
+           DATA — with foot indicators and clear instructions
+           ============================================================ */
+        const exerciseData = [{
+            title: "Big-Toe Stretch",
+            tag: "MOBILITY",
+            image: "assets/images/exercises/01-big-toe-stretch.jpg",
+            description: "Sit comfortably and gently pull the big toe straight with your fingers. Stay within a comfortable range and never force the joint.",
+            dose: "Hold 10–15 seconds • Repeat 5–10 times • 1–2× daily",
+            foot: "both",
+            tips: [
+                "Move slowly and gently.",
+                "Stop if you feel pain.",
+                "Breathe normally while holding.",
+                "This supports mobility; it does not guarantee bunion correction."
+            ]
+        }, {
+            title: "Big-Toe Abduction",
+            tag: "CONTROL",
+            image: "assets/images/exercises/02-big-toe-abduction.jpg",
+            description: "With your foot relaxed, practice moving the big toe away from the second toe while keeping the other toes still.",
+            dose: "Hold 5–10 seconds • 10 repetitions • 1–2× daily",
+            foot: "both",
+            tips: [
+                "Use your fingers to help position the toe initially if needed.",
+                "Try to keep the other toes relaxed.",
+                "Do not force the movement.",
+                "Stop if it hurts."
+            ]
+        }, {
+            title: "Towel Scrunches",
+            tag: "STRENGTH",
+            image: "assets/images/exercises/03-towel-scrunches.jpg",
+            description: "Place a small towel flat on the floor and use your toes to slowly pull it toward you.",
+            dose: "10–15 repetitions • Slow and controlled",
+            foot: "each",
+            tips: [
+                "Sit for balance if needed.",
+                "Use a small, light towel.",
+                "Avoid gripping so hard that it causes pain.",
+                "Stop if bunion discomfort increases."
+            ]
+        }, {
+            title: "Marble / Toy Pickup",
+            tag: "STRENGTH",
+            image: "assets/images/exercises/04-marble-toy-pickup.jpg",
+            description: "Place several safe, small objects on the floor. Pick them up one at a time with your toes and place them in a bowl.",
+            dose: "10–15 pickups • Each foot",
+            foot: "each",
+            tips: [
+                "Use larger safe objects if marbles are difficult to grip.",
+                "Move slowly and with control.",
+                "Keep the other toes relaxed.",
+                "Stop if pain or discomfort increases."
+            ]
+        }, {
+            title: "Calf Stretch",
+            tag: "FLEXIBILITY",
+            image: "assets/images/exercises/05-calf-stretch.jpg",
+            description: "Stand facing a wall with one leg behind you. Keep the back heel on the floor and lean forward until you feel a gentle calf stretch.",
+            dose: "Hold 20–30 seconds • Repeat 3 times • Each side",
+            foot: "each",
+            tips: [
+                "Keep the back heel firmly grounded.",
+                "Do not bounce.",
+                "Keep the front knee slightly bent.",
+                "You should feel a gentle stretch, not pain."
+            ]
+        }];
+
+        /* Foot indicator helper */
+        function getFootBadge(type) {
+            const map = {
+                'both': '<span class="foot-badge both">👣 Both feet</span>',
+                'each': '<span class="foot-badge left">👣 Left foot</span><span class="foot-badge right">👣 Right foot</span>',
+                'left': '<span class="foot-badge left">👣 Left foot</span>',
+                'right': '<span class="foot-badge right">👣 Right foot</span>'
+            };
+            return map[type] || map.both;
+        }
+
+        /* ============================================================
+           RENDER EXERCISE CARDS
+           ============================================================ */
+        const grid = document.querySelector('.exercise-grid');
+
+        function renderCards() {
+            grid.innerHTML = '';
+            exerciseData.forEach((ex, i) => {
+                const isWide = i === 4;
+                const card = document.createElement('article');
+                card.className = `exercise-card${isWide ? ' wide' : ''}`;
+                card.setAttribute('role', 'button');
+                card.setAttribute('tabindex', '0');
+                card.setAttribute('aria-label', `View ${ex.title} exercise`);
+                card.dataset.index = i;
+
+                card.innerHTML = `
+                    <div class="card-image">
+                        <img src="${ex.image}" alt="${ex.title} exercise infographic" loading="lazy" onerror="this.parentElement.classList.add('image-missing')">
+                        <span class="number">${String(i+1).padStart(2,'0')}</span>
+                        <span class="view">View exercise ↗</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="tag">${ex.tag}</div>
+                        <h3>${ex.title}</h3>
+                        <div class="foot-indicator">${getFootBadge(ex.foot)}</div>
+                        <p>${ex.description.substring(0, 80)}${ex.description.length > 80 ? '…' : ''}</p>
+                        <div class="dose">
+                            <b>${ex.dose.split('•')[0].trim()}</b>
+                            <span>${ex.dose.split('•')[1]?.trim() || ''}</span>
+                            <small>${ex.dose.split('•')[2]?.trim() || ''}</small>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+        renderCards();
+
+        /* ============================================================
+           RENDER ROUTINE LIST
+           ============================================================ */
+        const routineList = document.querySelector('.routine-list');
+        const routineSteps = [
+            { name: "Big-Toe Stretch", detail: "5–10 gentle holds", time: "2 min" },
+            { name: "Big-Toe Abduction", detail: "10 controlled reps", time: "2 min" },
+            { name: "Towel Scrunches", detail: "10–15 reps", time: "2 min" },
+            { name: "Marble / Toy Pickup", detail: "10–15 pickups", time: "2 min" },
+            { name: "Calf Stretch", detail: "20–30 sec × 3 each side", time: "3 min" }
+        ];
+
+        function renderRoutine() {
+            routineList.innerHTML = '';
+            routineSteps.forEach((step, i) => {
+                const item = document.createElement('div');
+                item.className = 'routine-item';
+                item.setAttribute('role', 'listitem');
+                item.innerHTML = `
+                    <span>${String(i+1).padStart(2,'0')}</span>
+                    <div><b>${step.name}</b><small>${step.detail}</small></div>
+                    <strong>${step.time}</strong>
+                `;
+                routineList.appendChild(item);
+            });
+        }
+        renderRoutine();
+
+        /* ============================================================
+           MODAL (exercise detail)
+           ============================================================ */
+        const modal = document.getElementById('exerciseModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalTag = document.getElementById('modalTag');
+        const modalDesc = document.getElementById('modalDescription');
+        const modalDose = document.getElementById('modalDose');
+        const modalTips = document.getElementById('modalTips');
+        const modalFootIndicator = document.getElementById('modalFootIndicator');
+        let lastFocused = null;
+
+        function openExercise(index) {
+            const ex = exerciseData[index];
+            if (!ex) return;
+            lastFocused = document.activeElement;
+            modalImg.src = ex.image;
+            modalImg.alt = `${ex.title} exercise`;
+            modalTitle.textContent = ex.title;
+            modalTag.textContent = ex.tag;
+            modalDesc.textContent = ex.description;
+            modalDose.textContent = ex.dose;
+            modalFootIndicator.innerHTML = getFootBadge(ex.foot);
+            modalTips.innerHTML = ex.tips.map(t => `<li>${t}</li>`).join('');
+            modal.classList.add('open');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('no-scroll');
+            const closeBtn = modal.querySelector('.modal-close');
+            if (closeBtn) closeBtn.focus();
+        }
+
+        function closeExercise() {
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+            if (!timerModal.classList.contains('open')) {
+                document.body.classList.remove('no-scroll');
+            }
+            if (lastFocused) lastFocused.focus();
+        }
+
+        grid.addEventListener('click', (e) => {
+            const card = e.target.closest('.exercise-card');
+            if (card && card.dataset.index !== undefined) {
+                openExercise(parseInt(card.dataset.index));
+            }
+        });
+        grid.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                const card = e.target.closest('.exercise-card');
+                if (card && card.dataset.index !== undefined) {
+                    e.preventDefault();
+                    openExercise(parseInt(card.dataset.index));
+                }
+            }
+        });
+
+        document.querySelectorAll('[data-close]').forEach(el => {
+            el.addEventListener('click', closeExercise);
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeExercise();
+                closeTimer();
+                closeMobileNav();
+            }
+        });
+
+        /* ============================================================
+           TIMER — Enhanced with foot indicators and rep guidance
+           ============================================================ */
+        const timerModal = document.getElementById('timerModal');
+        const timerTitle = document.getElementById('timerTitle');
+        const timerValue = document.getElementById('timerValue');
+        const timerInstruction = document.getElementById('timerInstruction');
+        const timerFootIndicator = document.getElementById('timerFootIndicator');
+        const timerStart = document.getElementById('timerStart');
+        const timerSkip = document.getElementById('timerSkip');
+        const timerClose = document.getElementById('timerClose');
+        const routineProgress = document.getElementById('routineProgress');
+        const timerRing = document.getElementById('timerRing');
+        const timerStepNum = document.getElementById('timerStepNum');
+        const timerStepTotal = document.getElementById('timerStepTotal');
+
+        // Enhanced routine with foot indicators and clear rep guidance
+        const routine = [
+            { name: "Big-Toe Stretch", duration: 120, instruction: "Hold 10–15 sec • Relax • Repeat 5–10×", foot: "both" },
+            { name: "Big-Toe Abduction", duration: 120, instruction: "Hold 5–10 sec • 10 reps • Use fingers if needed",
+            foot: "both" },
+            { name: "Towel Scrunches", duration: 120, instruction: "10–15 reps • Slow and controlled", foot: "each" },
+            { name: "Marble / Toy Pickup", duration: 120, instruction: "10–15 pickups • Move slowly", foot: "each" },
+            { name: "Calf Stretch", duration: 180, instruction: "Hold 20–30 sec • 3× each side • Keep heel down",
+                foot: "each" }
+        ];
+
+        const TOTAL_TIME = routine.reduce((s, r) => s + r.duration, 0);
+        timerStepTotal.textContent = routine.length;
+
+        let ri = 0,
+            remaining = 0,
+            timer = null,
+            running = false,
+            elapsedBefore = 0;
+
+        function setRing(frac) {
+            timerRing.style.setProperty('--pct', Math.max(0, Math.min(1, frac)) * 360 + 'deg');
+        }
+
+        function showStep() {
+            const r = routine[ri];
+            remaining = r.duration;
+            timerTitle.textContent = r.name;
+            timerValue.textContent = remaining;
+            timerInstruction.innerHTML = r.instruction;
+            timerFootIndicator.innerHTML = getFootBadge(r.foot);
+            timerStepNum.textContent = ri + 1;
+            setRing(1);
+            routineProgress.style.width = (elapsedBefore / TOTAL_TIME * 100) + '%';
+            running = false;
+            timerStart.textContent = 'Start';
+            timerStart.setAttribute('aria-label', 'Start this step');
+            timerSkip.disabled = false;
+        }
+
+        function openTimer() {
+            ri = 0;
+            elapsedBefore = 0;
+            running = false;
+            showStep();
+            timerModal.classList.add('open');
+            timerModal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('no-scroll');
+            timerStart.focus();
+        }
+
+        function closeTimer() {
+            if (timer) { clearInterval(timer);
+                timer = null; }
+            running = false;
+            timerModal.classList.remove('open');
+            timerModal.setAttribute('aria-hidden', 'true');
+            if (!modal.classList.contains('open')) {
+                document.body.classList.remove('no-scroll');
+            }
+        }
+
+        function finishRoutine() {
+            if (timer) { clearInterval(timer);
+                timer = null; }
+            running = false;
+            routineProgress.style.width = '100%';
+            timerTitle.textContent = 'Routine complete 🎉';
+            timerValue.textContent = '✓';
+            timerInstruction.textContent = 'Nice work. Keep tomorrow\'s session just as comfortable.';
+            timerFootIndicator.innerHTML = '';
+            timerStepNum.textContent = routine.length;
+            setRing(0);
+            timerStart.textContent = 'Close';
+            timerStart.setAttribute('aria-label', 'Close routine summary');
+            timerSkip.disabled = true;
+        }
+
+        function nextStep() {
+            elapsedBefore += routine[ri].duration;
+            if (ri < routine.length - 1) {
+                ri++;
+                showStep();
+            } else {
+                finishRoutine();
+            }
+        }
+
+        function tick() {
+            remaining--;
+            timerValue.textContent = Math.max(remaining, 0);
+            setRing(remaining / routine[ri].duration);
+            const elapsedInStep = routine[ri].duration - remaining;
+            routineProgress.style.width = ((elapsedBefore + elapsedInStep) / TOTAL_TIME * 100) + '%';
+            if (remaining <= 0) {
+                if (timer) { clearInterval(timer);
+                    timer = null; }
+                running = false;
+                nextStep();
+            }
+        }
+
+        function startTimer() {
+            running = true;
+            timerStart.textContent = 'Pause';
+            timerStart.setAttribute('aria-label', 'Pause');
+            timer = setInterval(tick, 1000);
+        }
+
+        function pauseTimer() {
+            if (timer) { clearInterval(timer);
+                timer = null; }
+            running = false;
+            timerStart.textContent = 'Resume';
+            timerStart.setAttribute('aria-label', 'Resume');
+        }
+
+        document.getElementById('startRoutine').addEventListener('click', openTimer);
+
+        timerStart.addEventListener('click', () => {
+            if (timerTitle.textContent.includes('complete')) {
+                closeTimer();
+                return;
+            }
+            if (running) pauseTimer();
+            else startTimer();
+        });
+
+        timerSkip.addEventListener('click', () => {
+            if (timerSkip.disabled) return;
+            if (timer) { clearInterval(timer);
+                timer = null; }
+            running = false;
+            nextStep();
+        });
+
+        timerClose.addEventListener('click', closeTimer);
+        document.querySelector('[data-close-timer]')?.addEventListener('click', closeTimer);
+
+        /* ============================================================
+           MOBILE NAV
+           ============================================================ */
+        const navToggle = document.getElementById('navToggle');
+        const mobileNav = document.getElementById('mobileNav');
+
+        function openMobileNav() {
+            mobileNav.classList.add('open');
+            mobileNav.setAttribute('aria-hidden', 'false');
+            navToggle.setAttribute('aria-expanded', 'true');
+            navToggle.classList.add('active');
+            document.body.classList.add('no-scroll');
+        }
+
+        function closeMobileNav() {
+            mobileNav.classList.remove('open');
+            mobileNav.setAttribute('aria-hidden', 'true');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.classList.remove('active');
+            if (!modal.classList.contains('open') && !timerModal.classList.contains('open')) {
+                document.body.classList.remove('no-scroll');
+            }
+        }
+
+        navToggle.addEventListener('click', () => {
+            mobileNav.classList.contains('open') ? closeMobileNav() : openMobileNav();
+        });
+        mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
+
+        /* ============================================================
+           SCROLL SHADOW ON HEADER
+           ============================================================ */
+        const header = document.querySelector('.site-header');
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            if (scrollTimeout) cancelAnimationFrame(scrollTimeout);
+            scrollTimeout = requestAnimationFrame(() => {
+                header.classList.toggle('scrolled', window.scrollY > 12);
+            });
+        }, { passive: true });
+
+        /* ============================================================
+           IMAGE FALLBACK
+           ============================================================ */
+        document.querySelectorAll('.card-image img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.parentElement.classList.add('image-missing');
+            });
+        });
+
+        console.log('🦶 BunionCare · Production Ready');
+        console.log('✓ Timing: 11 minutes (10–15 min range)');
+        console.log('✓ Foot indicators added');
+        console.log('✓ Clear exercise-specific timer guidance');
+        console.log('✓ Prominent medical disclaimer');
+        console.log('✓ Specific hero message for bunion discomfort');
+    </script>
+</body>
+</html>
